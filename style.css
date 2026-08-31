@@ -181,7 +181,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.2rem 5%;
+    padding: 0.4rem 5%;
     transition: var(--transition-smooth);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -189,7 +189,7 @@ img {
 .navbar.scrolled {
     background: rgba(31, 4, 48, 0.95);
     backdrop-filter: blur(10px);
-    padding: 0.9rem 5%;
+    padding: 0.3rem 5%;
     box-shadow: var(--shadow-md);
 }
 
@@ -204,25 +204,23 @@ img {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
-.logo-main {
-    font-family: var(--font-header);
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--text-white);
-    letter-spacing: 1px;
-    line-height: 1.1;
+.logo-img {
+    height: 228px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: var(--transition-smooth);
 }
 
-.logo-sub {
-    font-size: 0.75rem;
-    color: var(--color-accent-pink);
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    margin-top: 2px;
-    text-transform: uppercase;
+.navbar.scrolled .logo-img {
+    height: 120px;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .nav-action .btn-nav {
@@ -235,7 +233,7 @@ img {
 .hero {
     position: relative;
     background: radial-gradient(circle at 80% 20%, #4a135c 0%, var(--color-bg-dark) 60%);
-    padding: 9rem 5% 6rem 5%;
+    padding: 16rem 5% 6rem 5%;
     color: var(--text-white);
     overflow: hidden;
     min-height: 90vh;
@@ -983,25 +981,20 @@ img {
 
 .footer-logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.footer-logo-main {
-    font-family: var(--font-header);
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--text-white);
-    letter-spacing: 1px;
+.footer-logo-img {
+    height: 361px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: var(--transition-smooth);
 }
 
-.footer-logo-sub {
-    font-size: 0.75rem;
-    color: var(--color-accent-pink);
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-top: 4px;
+.footer-logo-img:hover {
+    transform: scale(1.05);
 }
 
 .footer-links {
@@ -1110,15 +1103,15 @@ img {
     }
     
     .navbar {
-        padding: 1rem 5%;
+        padding: 0.3rem 5%;
     }
     
-    .logo-main {
-        font-size: 1.1rem;
+    .logo-img {
+        height: 182px;
     }
     
-    .logo-sub {
-        font-size: 0.65rem;
+    .navbar.scrolled .logo-img {
+        height: 96px;
     }
     
     .nav-action {
@@ -1126,7 +1119,7 @@ img {
     }
     
     .hero {
-        padding-top: 8rem;
+        padding-top: 14rem;
         padding-bottom: 4rem;
         text-align: center;
     }
