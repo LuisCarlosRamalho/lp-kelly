@@ -60,23 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // --- INTERACTIVE PLAY BUTTON MOCK ---
-    const playTrigger = document.getElementById('play-video-trigger');
-    if (playTrigger) {
-        playTrigger.addEventListener('click', () => {
-            // Mock VSL video playback start
-            const overlay = playTrigger.querySelector('.video-overlay');
-            const placeholderImg = playTrigger.querySelector('.video-placeholder-bg');
-            
-            if (overlay && placeholderImg) {
-                overlay.style.transition = 'opacity 0.5s ease';
-                overlay.style.opacity = '0';
-                setTimeout(() => {
-                    overlay.style.display = 'none';
-                    // Informative alert for demonstration
-                    alert('Carregando VSL de Quelliane Galdino... (Este é um vídeo de demonstração interativo)');
-                }, 500);
-            }
-        });
-    }
 });
