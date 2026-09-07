@@ -382,38 +382,64 @@ img {
 /* Floating stats badge */
 .floating-badge {
     position: absolute;
-    bottom: 20px;
-    left: -30px;
-    padding: 1.2rem 1.5rem;
+    bottom: 25px;
+    left: -35px;
+    padding: 1rem 1.4rem;
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(31, 4, 48, 0.88) 0%, rgba(61, 14, 88, 0.82) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(232, 160, 220, 0.25);
+    box-shadow: 0 20px 40px rgba(15, 2, 24, 0.5), 0 0 25px rgba(232, 160, 220, 0.12);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     z-index: 10;
-    max-width: 250px;
+    max-width: 280px;
+    width: max-content;
+    transition: var(--transition-smooth);
+}
+
+.floating-badge:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 160, 220, 0.45);
+    box-shadow: 0 25px 45px rgba(15, 2, 24, 0.6), 0 0 35px rgba(232, 160, 220, 0.25);
 }
 
 .floating-badge-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(110, 139, 61, 0.2);
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
+    border: 1px solid rgba(52, 211, 153, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-accent-green-light);
+    color: #34d399;
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.25);
+}
+
+.floating-badge-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .floating-badge-info h4 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-white);
     font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
 }
 
 .floating-badge-info p {
-    font-size: 0.75rem;
-    color: var(--text-muted-light);
+    font-size: 0.8rem;
+    color: var(--color-accent-pink);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    margin-top: 2px;
 }
 
 /* --- PAIN SECTION (DOR) --- */
